@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-interface Generate/avatarItem {
+interface GenerateAvatarItem
   id: string;
   title?: string;
   status?: string;
@@ -10,8 +10,8 @@ interface Generate/avatarItem {
   [key: string]: any;
 }
 
-export default function Generate/avatarPage() {
-  const [items, setItems] = useState<Generate/avatarItem[]>([]);
+export default function GenerateAvatarPage
+  const [items, setItems] = useState<GenerateAvatarItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
   const [newTitle, setNewTitle] = useState('');
@@ -39,7 +39,7 @@ export default function Generate/avatarPage() {
   };
 
   const handleDelete = async (id: string) => {
-    await fetch(`/api/generate/avatar/${id}`, { method: 'DELETE' });
+    await fetch(`/ApiGenerateAvatar/${id}`, { method: 'DELETE' });
     setItems(prev => prev.filter(i => i.id !== id));
   };
 

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-interface Marketplace/assetsItem {
+interface MarketplaceAssetsItem
   id: string;
   title?: string;
   status?: string;
@@ -10,8 +10,8 @@ interface Marketplace/assetsItem {
   [key: string]: any;
 }
 
-export default function Marketplace/assetsPage() {
-  const [items, setItems] = useState<Marketplace/assetsItem[]>([]);
+export default function MarketplaceAssetsPage
+  const [items, setItems] = useState<MarketplaceAssetsItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
   const [newTitle, setNewTitle] = useState('');
@@ -39,7 +39,7 @@ export default function Marketplace/assetsPage() {
   };
 
   const handleDelete = async (id: string) => {
-    await fetch(`/api/marketplace/assets/${id}`, { method: 'DELETE' });
+    await fetch(`/ApiMarketplaceAssets/${id}`, { method: 'DELETE' });
     setItems(prev => prev.filter(i => i.id !== id));
   };
 
