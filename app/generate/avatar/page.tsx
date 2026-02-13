@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-interface GenerateAvatarItem
+interface GenerateAvatarItem {
   id: string;
   title?: string;
   status?: string;
@@ -10,7 +10,7 @@ interface GenerateAvatarItem
   [key: string]: any;
 }
 
-export default function GenerateAvatarPage
+export default function GenerateAvatarPage() {
   const [items, setItems] = useState<GenerateAvatarItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);

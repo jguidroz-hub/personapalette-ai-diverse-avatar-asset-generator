@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-interface MarketplaceAssetsItem
+interface MarketplaceAssetsItem {
   id: string;
   title?: string;
   status?: string;
@@ -10,7 +10,7 @@ interface MarketplaceAssetsItem
   [key: string]: any;
 }
 
-export default function MarketplaceAssetsPage
+export default function MarketplaceAssetsPage() {
   const [items, setItems] = useState<MarketplaceAssetsItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
